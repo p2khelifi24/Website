@@ -1,0 +1,94 @@
+<html>
+<head>
+<script language="javaScript">
+
+function guessing()
+{
+	/*block comment
+		If they guess the number, alert this fact and tell them how many guesses it took them to guess the number.
+		Us if else codition, then use what they give you and give them a statment if they get it then it skips to the end
+		1. If the guess is too high then tell the user too high
+		2. if the guess is too low then tell the user the guess was to low
+		3. if they guess it then skip to the right awnswer page
+	*/
+	var userguess = 11;
+	var numOfGuesses = 0; //camel case
+	var rand = Math.random()*10
+	rand = rand +1;
+	rand = parseInt(rand);
+	userguess = prompt("Pick a number, any number between 1 and 10.");
+	numOfGuesses++
+	alert("You picked "+userguess);
+	while( userguess != rand )//loop while the user's awnser is wrong
+	{
+		if ( userguess < rand )//guess is too low
+		{
+			alert("oh sorry too low")
+		}
+		
+		else if ( userguess > rand ) //guess is too high
+		{
+			alert("nope too high")
+		}
+		userguess = prompt("Try Again");
+		numOfGuesses++
+	}
+		if ( userguess == rand )
+		{
+			alert("Correct, It took you "+numOfGuesses+" guesses")
+		}
+	
+} //end of guessing
+
+function greeting()
+{
+	alert("Hello Old Friend.")// "hello old friend" is a perameter
+	
+	
+}// end of greeting()also this teacher is great, but only if he reads the comments
+
+
+
+function greeting1()
+{
+	//<a href="https://www.names.org/n/"+name+"/about"></a>
+	// = is the assgignment operator. 
+	// assignment stores what's on the right side into the element on the left.
+	var name = prompt("Type Your Name Here")// "type your name" is a perameter
+	alert("Greetings, "+name);
+}// end of greeting() this teacher also is great, but only if he reads the comments 
+
+function greeting2()
+{
+	var answer = confirm("Wanna play a game?");
+	alert(answer);
+
+} // end of greeting2
+</script>
+</head>
+<body background="images/bkgnd2.gif"/>
+<center>
+<h1> My First Java Script</h1>
+
+</center>
+
+<br/><br/><br/>
+<input type="button" value="Play my guessing game?" onclick="guessing()" />
+
+<br/><br/>
+<img src="images/guessinggameimg.gif" width="225" align="left"  />
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<hr color="black"/>
+<input type="button" value="Click me, Trust" onclick="greeting()" />
+
+<br/><br/>
+<input type="button" value="Click to Enter Your Name" onclick="greeting1()" />
+
+<br/><br/>
+<input type="button" value="Click again, if you Truly Trust Me." onclick="greeting2()" /><br/>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<a href="index.html">To the index page!</a>
+</body>
+</html>
